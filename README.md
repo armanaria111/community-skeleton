@@ -34,13 +34,13 @@
     <img class="flag-img" src="https://flagicons.lipis.dev/flags/4x3/cn.svg" alt="Chinese" width="24" height="24">
 </p>
 
-[Uvdesk community helpdesk][1] project skeleton packaged along with the bare essential utilities and tools to build and customize your own helpdesk solutions.
+[میز کمک انجمن Uvdesk][1] اسکلت پروژه به همراه ابزارها و امکانات ضروری برای ساخت و سفارشی‌سازی راه‌حل‌های میز خدمت شما ارائه شده است.
 
-برای مشاهده دمو به وبسایت رسمی ما مراجعه کنید [see it in action!][15]
+برای مشاهده دمو به وبسایت رسمی ما مراجعه کنید [آن را در عمل ببینید!][15]
 
 UVdesk را بررسی کنید **وب‌سایت رسمی سیمفونی** – [Symfony][24]
 
-Getting Started
+شروع به کار
 -----------------
 
 * [About](#about)
@@ -68,11 +68,11 @@ The standard distribution comes packaged along with the following helpdesk packa
 
   * [**Extension Framework**][3] - Introduces support for third-party package integration and development to easily build and extend the functionalities of your helpdesk system as per your requirements
 
-  * [**Automation Bundle**][4] - Adds support for workflows and prepared responses to automate any specific operations within your helpdesk system
+  * [**Automation Bundle**][4] - پشتیبانی از گردش‌های کاری و پاسخ‌های آماده را برای خودکارسازی هرگونه عملیات خاص در سیستم پشتیبانی شما اضافه می‌کند.
 
-  * [**Mailbox Component**][11] - Convert and get all your emails to support tickets on UVDesk and manage customer query easily.
+  * [**Mailbox Component**][11] - تمام ایمیل‌های خود را تبدیل کرده و برای پشتیبانی از تیکت‌ها در UVDesk دریافت کنید و به راحتی درخواست‌های مشتری را مدیریت کنید.
 
-  * [**Support Center Bundle**][5] - Integrates the easily customizable support center portal to enable users to easily interact with the support staff through your helpdesk system
+  * [**Support Center Bundle**][5] - پورتال مرکز پشتیبانی که به راحتی قابل تنظیم است را ادغام می‌کند تا کاربران بتوانند به راحتی از طریق سیستم میز کمک شما با کارکنان پشتیبانی تعامل داشته باشند.
 
 Reach out to us at our official [gitter chat][20] or by joining [forum][21] for any queries, concerns and feature request discussions.
 
