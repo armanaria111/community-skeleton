@@ -36,9 +36,9 @@
 
 [Uvdesk community helpdesk][1] project skeleton packaged along with the bare essential utilities and tools to build and customize your own helpdesk solutions.
 
-Visit our official demo website to [see it in action!][15]
+برای مشاهده دمو به وبسایت رسمی ما مراجعه کنید [see it in action!][15]
 
-Check out UVdesk on **Symfony Official Website** – [Symfony][24]
+UVdesk را بررسی کنید **وب‌سایت رسمی سیمفونی** – [Symfony][24]
 
 Getting Started
 -----------------
