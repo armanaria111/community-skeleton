@@ -18,7 +18,7 @@
 </p>
 
 <p align="center">
-    ➡️ <a href="https://www.uvdesk.com/en/opensource/">Website</a> | <a href="https://docs.uvdesk.com/">Documentation</a> | <a href="https://www.uvdesk.com/en/blog/open-source-helpdesk-installation-on-ubuntu-uvdesk/">Installation Guide</a> | <a href="https://forums.uvdesk.com/">Forums</a> | <a href="https://www.facebook.com/uvdesk/">Community</a> ⬅️
+    ➡️ <a href="https://www.uvdesk.com/en/opensource/">وب‌سایت</a> | <a href="https://docs.uvdesk.com/">مستندات</a> | <a href="https://www.uvdesk.com/en/blog/open-source-helpdesk-installation-on-ubuntu-uvdesk/">راهنمای نصب</a> | <a href="https://forums.uvdesk.com/">انجمن‌ها</a> | <a href="https://www.facebook.com/uvdesk/">جامعه</a> ⬅️
 </p>
 
 <p align="center" style="display: inline;">
@@ -32,6 +32,8 @@
     <img class="flag-img" src="https://flagicons.lipis.dev/flags/4x3/pl.svg" alt="Polish" width="24" height="24">
     <img class="flag-img" src="https://flagicons.lipis.dev/flags/4x3/tr.svg" alt="Turkish" width="24" height="24">
     <img class="flag-img" src="https://flagicons.lipis.dev/flags/4x3/cn.svg" alt="Chinese" width="24" height="24">
+    <img class="flag-img" src="https://flagicons.lipis.dev/flags/4x3/ir.svg" alt="Chinese" width="24" height="24">
+
 </p>
 
 [میز کمک انجمن Uvdesk][1] اسکلت پروژه به همراه ابزارها و امکانات ضروری برای ساخت و سفارشی‌سازی راه‌حل‌های میز خدمت شما ارائه شده است.
