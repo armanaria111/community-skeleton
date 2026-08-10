@@ -269,13 +269,13 @@ Please don't disclose any security vulnerabilities publicly. If you find any sec
 
 <a href="https://github.com/uvdesk/community-skeleton/graphs/contributors"><img src="https://opencollective.com/uvdesk/contributors.svg?width=890&button=false"/></a>
 
-#### Backers
+#### حامیان
 
 از همه حامیانمون ممنونم! 🙏
 
 <a href="https://opencollective.com/uvdesk#contributors" target="_blank"><img src="https://opencollective.com/uvdesk/backers.svg?width=890"></a>
 
-#### Sponsors
+#### حامیان مالی
 
 با حمایت مالی از این پروژه، از آن حمایت کنید. لوگوی شما به همراه لینکی به وب‌سایتتان در اینجا نمایش داده خواهد شد.
 
