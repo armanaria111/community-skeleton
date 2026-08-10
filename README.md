@@ -45,19 +45,19 @@ UVdesk را بررسی کنید **وب‌سایت رسمی سیمفونی** – 
 شروع به کار
 -----------------
 
-* [About](#about)
-* [Features](#features)
-* [Documentation](#documentation)
-* [Modules](#modules)
-* [Requirements](#requirements)
-* [Installation](#installation)
-* [Docker Runtime](#docker-runtime)
-* [Docker Persistent Container](#docker-persistent-container)
-* [Vagrant Virtual Environment](#vagrant-virtual-environment)
-* [License](#license)
-* [Security Vulnerabilities](#security-vulnerabilities)
-* [Feedback](#feedback)
-* [Contributions](#contributions)
+* [درباره ما](#about)
+* [ویژگی‌ها](#features)
+* [مستندات](#documentation)
+* [ماژول‌ها](#modules)
+* [الزامات](#requirements)
+* [نصب](#installation)
+* [زمان اجرای داکر](#docker-runtime)
+* [کانتینر پایدار داکر](#docker-persistent-container)
+* [محیط مجازی Vagrant](#vagrant-virtual-environment)
+* [مجوز](#license)
+* [آسیب‌پذیری‌های امنیتی](#security-vulnerabilities)
+* [بازخورد](#feedback)
+* [مشارکت‌ها](#contributions)
 
 About
 -----------------
@@ -66,9 +66,9 @@ Build on top of [symfony](https://symfony.com/) and [backbone.js](https://backbo
 
 The standard distribution comes packaged along with the following helpdesk packages to cover a wide range of use-cases and requirements:
 
-  * [**Core Framework**][2] - At the heart of the helpdesk system, the core framework consists of all the necessary apis required by your project and dependent packages to keep things running smoothly
+  * [**Core Framework**][2] - در قلب سیستم پشتیبانی، چارچوب اصلی شامل تمام API های لازم مورد نیاز پروژه شما و بسته های وابسته برای اجرای روان امور است.
 
-  * [**Extension Framework**][3] - Introduces support for third-party package integration and development to easily build and extend the functionalities of your helpdesk system as per your requirements
+  * [**Extension Framework**][3] - پشتیبانی از ادغام و توسعه بسته‌های شخص ثالث را ارائه می‌دهد تا به راحتی بتوانید قابلیت‌های سیستم پشتیبانی خود را مطابق با نیازهایتان بسازید و گسترش دهید.
 
   * [**Automation Bundle**][4] - پشتیبانی از گردش‌های کاری و پاسخ‌های آماده را برای خودکارسازی هرگونه عملیات خاص در سیستم پشتیبانی شما اضافه می‌کند.
 
@@ -80,13 +80,13 @@ Reach out to us at our official [gitter chat][20] or by joining [forum][21] for 
 
 The development of the uvdesk community edition is led by the [uvdesk][10] team and backed by [Webkul][9]. Visit our [website][1] to learn more about the UVDesk Helpdesk System.
 
-Features
+ویژگی‌ها
 ----------------
 
-* [Translation Support (Multilingual)][32]
-* Unlimited Agents, Group, Team, Customers, Tickets etc
-* Agent Privileges
-* No limit on the number of Mailbox/Email integration
+* [پشتیبانی ترجمه (چندزبانه)][32]
+* نمایندگان نامحدود، گروه، تیم، مشتریان، تیکت‌ها و غیره
+* امتیازات نماینده
+* بدون محدودیت در تعداد ادغام صندوق پستی/ایمیل
 * Saved Replies for common queries
 * Filter based on ticket status, Id, agent, customer, etc
 * Block Spam
@@ -120,7 +120,7 @@ Visit [docs.uvdesk.com](https://docs.uvdesk.com/) to read our official documenta
 
 We use Jekyll to develop and maintain our documentations. Consider contributing by submitting a pull request to our project's [jeykll repository](https://github.com/uvdesk/uvdesk.github.io).
 
-Requirements
+الزامات
 --------------
 
 * **OS**: Ubuntu 16.04 LTS or higher / Windows 7 or Higher (WAMP / XAMPP).
@@ -132,27 +132,27 @@ Requirements
 * **Composer**: 2 or higher.
 * **PHP IMAP** **&** **PHP Mailparse** for [Ubuntu][7], [Windows][23], [Centos][28], [Mac][27].
 
-Installation
+نصب
 --------------
 
-The installation process is broken down into two distinct steps:
+مراحل نصب به دو مرحله مجزا تقسیم می‌شود:
 
-* Setup
-* Configuration
+* راه‌اندازی
+* پیکربندی
 
 ### Setting up your helpdesk project
 
-In this step of the installation process, you'll be downloading the helpdesk project skeleton and installing all of its dependent components.
+در این مرحله از فرآیند نصب، شما اسکلت پروژه helpdesk را دانلود کرده و تمام اجزای وابسته به آن را نصب خواهید کرد.
 
-As per your convenience, you can choose to either use composer for download the project and install all its dependencies automatically or directly download the project archive that comes pre-packaged with all of the project dependencies already installed.
+بسته به راحتی شما، می‌توانید از composer برای دانلود پروژه و نصب خودکار تمام وابستگی‌های آن استفاده کنید یا مستقیماً فایل فشرده پروژه را که از قبل با تمام وابستگی‌های پروژه نصب شده است، دانلود کنید.
 
-We recommend using composer over direct download whenever possible. However, if your system does not have enough ram to execute composer operations properly (for example: installing on a shared host with limited system resources), we suggest using the direct download method instead to mitigate these kind of issues.
+ما توصیه می‌کنیم تا حد امکان از composer به جای دانلود مستقیم استفاده کنید. با این حال، اگر سیستم شما رم کافی برای اجرای صحیح عملیات composer را ندارد (به عنوان مثال: نصب روی یک هاست اشتراکی با منابع سیستم محدود)، پیشنهاد می‌کنیم برای کاهش این نوع مشکلات، از روش دانلود مستقیم استفاده کنید.
 
-Irrespective of the method you use, the process to configuring your helpdesk remains the same.
+صرف نظر از روشی که استفاده می‌کنید، فرآیند پیکربندی میز کمک شما یکسان است.
 
 #### Composer
 
-You can use composer to setup your project by simply running the following command from your terminal:
+شما می‌توانید با اجرای دستور زیر از ترمینال خود، از composer برای راه‌اندازی پروژه خود استفاده کنید:
 
 ```bash
 $ composer create-project uvdesk/community-skeleton helpdesk-project
@@ -169,7 +169,7 @@ $ unzip -q /var/www/uvdesk-community-current-stable.zip -d /var/www/ \
 
 ### Configuring your helpdesk project
 
-After you've downloaded and installed all the project dependencies, you can configure your helpdesk installation using either of the following ways:
+پس از دانلود و نصب تمام وابستگی‌های پروژه، می‌توانید نصب میز کمک خود را با استفاده از یکی از روش‌های زیر پیکربندی کنید:
 
 #### Using Terminal
 
@@ -197,7 +197,7 @@ or
 http(s)://example.com/public
 ~~~
 
-After opening your project in the web browser, you will be greeted by the web installer which will guide you in configuring your project.
+پس از باز کردن پروژه خود در مرورگر وب، با نصب‌کننده وب مواجه خواهید شد که شما را در پیکربندی پروژه راهنمایی می‌کند.
 
 
 ##### Run project on localhost (dev mode)
@@ -228,24 +228,24 @@ Docker Runtime
 
 [Dockerize your helpdesk project][22]
 
-Docker Persistent Container
+کانتینر پایدار داکر
 --------------
 
 [Get started with Uvdesk now by using docker persistent container][34]
 
-Vagrant Virtual Environment
+محیط مجازی Vagrant
 --------------
 
 [Get started with uvdesk now by using vagrant to setup virtual environment][33]
 
-Modules
+ماژول‌ها
 --------------
 
 [Available Modules/Apps](https://store.webkul.com/UVdesk/UVdesk-Open-Source.html)
 
 Need something else ? email us at support@uvdesk.com
 
-License
+مجوز
 --------------
 
 All libraries and bundles included in the UVDesk Community Edition are released under the [OSL-3.0 license][12] license.
@@ -255,7 +255,7 @@ Security Vulnerabilities
 
 Please don't disclose any security vulnerabilities publicly. If you find any security vulnerability in our platform then please write us at [support@uvdesk.com](mailto:support@uvdesk.com).
 
-Feedback
+بازخورد
 ---------
 #### Feedback (Support Community project by raising feedback)
 
@@ -263,21 +263,21 @@ Feedback
 * [Capterra][18]
 * [Software suggest][19]
 
-Contributions
+مشارکت‌ها
 --------------
-This project is hosted on [Open Collective][13] and exists thanks to our contributors:
+این پروژه در [اوپن کالکتیو][13] میزبانی می‌شود و به لطف مشارکت‌کنندگان ما وجود دارد:
 
 <a href="https://github.com/uvdesk/community-skeleton/graphs/contributors"><img src="https://opencollective.com/uvdesk/contributors.svg?width=890&button=false"/></a>
 
 #### Backers
 
-Thank you to all our backers! 🙏
+از همه حامیانمون ممنونم! 🙏
 
 <a href="https://opencollective.com/uvdesk#contributors" target="_blank"><img src="https://opencollective.com/uvdesk/backers.svg?width=890"></a>
 
 #### Sponsors
 
-Support this project by becoming a sponsor. Your logo will show up here with a link to your website.
+با حمایت مالی از این پروژه، از آن حمایت کنید. لوگوی شما به همراه لینکی به وب‌سایتتان در اینجا نمایش داده خواهد شد.
 
 <a href="https://opencollective.com/uvdesk/contribute/sponsor-7372/checkout" target="_blank"><img src="https://images.opencollective.com/static/images/become_sponsor.svg"></a>
 
