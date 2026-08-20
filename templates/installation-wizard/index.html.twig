@@ -274,28 +274,28 @@
 <div class="form-field">
 <label class="form-label">نام<span class="uv-mandatory">*</span></label>
 <div class="form-content">
-<input name="name" type="text" value="<%- user.name %>" id="name" placeholder="Name" />
+<input name="name" type="text" value="<%- user.name %>" id="name" placeholder="نام" />
 <p class="wizard-form-info">نام کاربری که قرار است ایجاد شود.</p>
 </div>
 </div>
 <div class="form-field">
 <label class="form-label">ایمیل<span class="uv-mandatory">*</span></label>
 <div class="form-content">
-<input name="email" type="text" value="<%- user.email %>" placeholder="Email" />
+<input name="email" type="text" value="<%- user.email %>" placeholder="ایمیل" />
 <p class="wizard-form-info">ایمیل کاربری که قرار است ایجاد شود.</p>
 </div>
 </div>
 <div class="form-field">
 <label class="form-label">رمز عبور<span class="uv-mandatory">*</span></label>
 <div class="form-content">
-<input name="password" type="password" id="password" placeholder="Password" />
+<input name="password" type="password" id="password" placeholder="رمز عبور" />
 <p class="wizard-form-info">رمز عبوری که هنگام تأیید اعتبار کاربر استفاده می‌شود.</p>
 </div>
 </div>
 <div class="form-field">
 <label class="form-label">تأیید رمز عبور<span class="uv-mandatory">*</span></label>
 <div class="form-content">
-<input name="confirm_password" type="password" value="<%- user.confirmPassword %>" id="confirm_password" placeholder="Confirm Password" />
+<input name="confirm_password" type="password" value="<%- user.confirmPassword %>" id="confirm_password" placeholder="تأیید رمز عبور" />
 <p class="wizard-form-info">رمز عبور کاربر وارد شده را تأیید کنید.</p>
 </div>
 </div>
@@ -304,18 +304,18 @@
 </script>
 <script id="installationWizard-WebsiteConfigurationTemplate" type="text/template">
 <div id="wizard-configureWebsite">
-<h2>Website Configuration</h2>
+<h2>پیکربندی وب‌سایت</h2>
 <form name="wizardForm-ConfigureWebsite" method="post" action="">
 <div class="form-field">
 <label class="form-label">پیشوند پنل اعضا<span class="uv-mandatory">*</span></label>
 <div class="form-content">
-<input name="memberUrlPrefix" type="text" value="<%- member_panel_url %>" placeholder="member" class="form-content"/>
+<input name="memberUrlPrefix" type="text" value="<%- member_panel_url %>" placeholder="عضو" class="form-content"/>
 </div>
 </div>
 <div class="form-field">
 <label class="form-label">پیشوند پنل مشتری<span class="uv-mandatory">*</span></label>
 <div class="form-content">
-<input name="customerUrlPrefix" type="text" value="<%- customer_panel_url %>" placeholder="customer" class="form-content"/>
+<input name="customerUrlPrefix" type="text" value="<%- customer_panel_url %>" placeholder="مشتری" class="form-content"/>
 </div>
 </div>
 </form>
@@ -326,15 +326,15 @@
 <h2>تبریک می‌گویم!</h2>
 <p>میز کمک Uvdesk شما با موفقیت نصب شد.</p>
 <div class="line-break"></div>
-<p style="color: #6F6F6F;">Visit your admin and support panel by clicking on respective buttons.</p>
-<h5 style="padding: 15px 0px 15px 0px;">Admin</h5>
-<a class ="button_css" href="<%- prefixCollection.member %>" target="_blank" id="member_panel_url" target="_blank" id="member_panel_url" style="">Admin Panel</a>
-<h5 style="padding: 35px 0px 15px 0px">Frontend</h5>
-<a class ="button_css" href="<%- prefixCollection.knowledgebase %>" target="_blank" id="customer_panel_url" target="_blank" id="customer_panel_url">Knowledgebase</a>
+<p style="color: #6F6F6F;">با کلیک روی دکمه‌های مربوطه، از پنل مدیریت و پشتیبانی خود دیدن کنید.</p>
+<h5 style="padding: 15px 0px 15px 0px;">مدیر</h5>
+<a class ="button_css" href="<%- prefixCollection.member %>" target="_blank" id="member_panel_url" target="_blank" id="member_panel_url" style="">پنل مدیریت</a>
+<h5 style="padding: 35px 0px 15px 0px">ظاهر (فرانت‌اند)</h5>
+<a class ="button_css" href="<%- prefixCollection.knowledgebase %>" target="_blank" id="customer_panel_url" target="_blank" id="customer_panel_url">پایگاه دانش</a>
 </div>
 </script>
 <script id="installationWizard-InstallSetupTemplate-ProcessingItem" type="text/template">
-<h2>Installation</h2>
+<h2>نصب</h2>
 <p>لطفا تا نصب میز کمک خود صبر کنید. این ممکن است تا چند دقیقه طول بکشد.</p>
 <div class="lg-icon">
 <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 90 90" >
@@ -364,7 +364,7 @@
 <div id="wizard-finalizeInstall">
 <p>میز کمک جامعه Uvdesk شما آماده نصب است.</p>
 <ul class="button-groups" style="margin-top: 20px;">
-<li><button id="wizardCTA-StartInstallation" class="wizard-button solid button-theme-uvdesk" style="margin: unset;">Install Now</button></li>
+<li><button id="wizardCTA-StartInstallation" class="wizard-button solid button-theme-uvdesk" style="margin: unset;">همین حالا نصب کنید</button></li>
 </ul>
 </div>
 </script>
