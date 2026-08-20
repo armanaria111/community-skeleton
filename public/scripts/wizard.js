@@ -1,12 +1,12 @@
 (function ($) {
 const ERRORS = {
 error404: {
-title: 'Unable to locate the path on the server.',
-description: 'Try putting index.php after your helpdesk installation\'s site url or If you are using apache, make sure that mod_rewrite module is enabled and AllowOverride directive for document root is set to All/FileInfo in your server\'s configuration file.',
+title: 'مسیر روی سرور پیدا نمیشه.',
+description: 'سعی کنید index.php را بعد از url سایت نصب دسکتاپ خود قرار دهید یا اگر از apache استفاده می کنید، مطمئن شوید که ماژول mod_rewrite فعال است و دستورالعمل AllowOverride برای ریشه سند روی All/FileInfo در فایل پیکربندی سرور شما تنظیم شده است.',
 },
 error500: {
-title: 'Something\'s bad happened with the server.',
-description: ' Try again by clicking the back button or launch the wizard again by refreshing the web page or clicking the cancel button.'
+title: 'یه اتفاق بدی برای سرور افتاده.',
+description: ' با کلیک بر روی دکمه بازگشت دوباره امتحان کنید یا با رفرش کردن صفحه وب یا کلیک بر روی دکمه لغو، دوباره ویزارد را اجرا کنید.'
 },
 };
 // Wait for all assets to load
@@ -37,7 +37,7 @@ this.$el.find('#wizard-finalizeInstall .installation-progress-loader').html(this
 await $.post('./wizard/xhr/load/configurations').fail(response => {
 if (response.status == 500) {
 this.$el.find('.wizard-svg-icon-failed-criteria-checklist').html(this.wizard_icons_notice_template());
-this.$el.find('#error-message-bar').html('</span> Issue can be resolved by simply <a href="https://www.uvdesk.com/en/blog/open-source-helpdesk-installation-on-ubuntu-uvdesk/" target="_blank"><p> enabling your <b>.env</b> file read/write permission</a> refresh the browser and try again.</p>');
+this.$el.find('#error-message-bar').html('</span> مشکل را می‌توان به سادگی با فعال کردن <a href="https://www.uvdesk.com/en/blog/open-source-helpdesk-installation-on-ubuntu-uvdesk/" target="_blank"><p> دسترسی خواندن/نوشتن فایل <b>.env</b> خود را فعال کنید. مرورگر را رفرش کنید و دوباره امتحان کنید.</p>');
 }
 });
 this.$el.find('#wizard-finalizeInstall').html(this.installation_process_template({ currentStep: 'load-migrations' }));
@@ -46,7 +46,7 @@ this.next(1);
 await $.post('./wizard/xhr/load/migrations').fail(response => {
 if (response.status == 500) {
 this.$el.find('.wizard-svg-icon-failed-criteria-checklist').html(this.wizard_icons_notice_template());
-this.$el.find('#error-message-bar').html('Something went wrong ! Please try again');
+this.$el.find('#error-message-bar').html('مشکلی پیش آمد! لطفا دوباره امتحان کنید');
 }
 });
 this.$el.find('#wizard-finalizeInstall').html(this.installation_process_template({ currentStep: 'populate-datasets' }));
@@ -55,7 +55,7 @@ this.next(2);
 await $.post('./wizard/xhr/load/entities').fail(response => {
 if (response.status == 500) {
 this.$el.find('.wizard-svg-icon-failed-criteria-checklist').html(this.wizard_icons_notice_template());
-this.$el.find('#error-message-bar').html('Something went wrong ! Please try again');
+this.$el.find('#error-message-bar').html('مشکلی پیش آمد! لطفا دوباره امتحان کنید');
 }
 });
 this.$el.find('#wizard-finalizeInstall').html(this.installation_process_template({ currentStep: 'create-super-user' }));
@@ -64,7 +64,7 @@ this.next(3);
 await $.post('./wizard/xhr/load/super-user').fail(response => {
 if (response.status == 500) {
 this.$el.find('.wizard-svg-icon-failed-criteria-checklist').html(this.wizard_icons_notice_template());
-this.$el.find('#error-message-bar').html('Something went wrong ! Please try again');
+this.$el.find('#error-message-bar').html('مشکلی پیش آمد! لطفا دوباره امتحان کنید');
 }
 });
 this.$el.find('#wizard-finalizeInstall').html(this.installation_process_template({ currentStep: 'load-website-prefixes' }));
@@ -73,7 +73,7 @@ this.next(4);
 let websiteRoutes = await $.post('./wizard/xhr/load/website-configure').fail(response => {
 if (response.status == 500) {
 this.$el.find('.wizard-svg-icon-failed-criteria-checklist').html(this.wizard_icons_notice_template());
-this.$el.find('#error-message-bar').html('Something went wrong ! Please try again');
+this.$el.find('#error-message-bar').html('مشکلی پیش آمد! لطفا دوباره امتحان کنید');
 }
 });
 this.wizard.prefix.member = websiteRoutes.memberLogin;
@@ -177,14 +177,14 @@ memberPrefix == null
 || memberPrefix == ""
 ) {
 errorFlag = true;
-this.$el.find('.form-content input[name="memberUrlPrefix"]').after("<span class='wizard-form-notice'>This field is mandatory</span>")
+this.$el.find('.form-content input[name="memberUrlPrefix"]').after("<span class='wizard-form-notice'>این فیلد اجباری است</span>")
 }
 if (
 customerPrefix == null
 || customerPrefix == ""
 ) {
 errorFlag = true;
-this.$el.find('.form-content input[name="customerUrlPrefix"]').after("<span class='wizard-form-notice'>This field is mandatory</span>")
+this.$el.find('.form-content input[name="customerUrlPrefix"]').after("<span class='wizard-form-notice'>این فیلد اجباری است</span>")
 }
 if (customerPrefix == memberPrefix) {
 errorFlag = true;
@@ -423,7 +423,7 @@ if (mandatoryFieldsCollection.indexOf(event.target.name) != -1) {
 if (event.target.value == null || event.target.value == "") {
 errorFlag = true;
 selectedElement.find('.wizard-form-notice')
-selectedElement.append("<span class='wizard-form-notice'>This field is mandatory</span>");
+selectedElement.append("<span class='wizard-form-notice'>این فیلد اجباری است</span>");
 }
 }
 let credentials = {
@@ -586,7 +586,7 @@ this.set('redis-status', response);
 }).fail((jqXHR, textStatus, errorThrown) => {
 this.set('redis-status', {
 status: false,
-message: ERRORS.hasOwnProperty('error' + jqXHR.status) ? ERRORS['error' + jqXHR.status].title : 'An unexpected error occurred during the Redis status verification process',
+message: ERRORS.hasOwnProperty('error' + jqXHR.status) ? ERRORS['error' + jqXHR.status].title : 'یک خطای غیرمنتظره در طول فرآیند تأیید وضعیت Redis رخ داد',
 description: ERRORS.hasOwnProperty('error' + jqXHR.status) ? ERRORS['error' + jqXHR.status].description : 'جزئیات موجود نیست',
 });
 }).always(() => {
@@ -646,10 +646,10 @@ events: {
 // show and hide extension details
 const currentElement = Backbone.$(e.currentTarget)
 currentElement.parents('[class*="info-container"]').siblings('.systemCriteria-Details').toggle();
-if (currentElement.html() == "Show details") {
-currentElement.html("Hide details");
+if (currentElement.html() == "نمایش جزئیات") {
+currentElement.html("جزئیات را پنهان کنید");
 } else {
-currentElement.html("Show details");
+currentElement.html("نمایش جزئیات");
 }
 }
 },
@@ -697,7 +697,7 @@ this.reference_nodes.version.html(this.wizard_system_requirements_php_ver_templa
 this.reference_nodes.version.find('.PHPVersion-toggle-details').hide();
 if (false == this.model.get('fetch')) {
 this.reference_nodes.version.find('.wizard-svg-icon-criteria-checklist').html(this.wizard_icons_loader_template());
-this.reference_nodes.version.find('label').html('Checking currently enabled PHP version');
+this.reference_nodes.version.find('label').html('بررسی نسخه PHP فعال فعلی');
 } else {
 if (true === this.model.get('php-version').status) {
 this.reference_nodes.version.find('.wizard-svg-icon-criteria-checklist').html(this.wizard_icons_success_template());
@@ -743,7 +743,7 @@ renderPHPExtensionsCriteria: function(status) {
 this.reference_nodes.extension.html(this.wizard_system_requirements_php_ext_template(this.model.get('php-extensions')));
 if (false == this.model.get('fetch')) {
 this.reference_nodes.extension.find('.wizard-svg-icon-criteria-checklist').html(this.wizard_icons_loader_template());
-this.reference_nodes.extension.find('label').html('Checking currently enabled PHP extensions');
+this.reference_nodes.extension.find('label').html('بررسی افزونه‌های PHP فعال فعلی');
 } else if(this.model.get('php-extensions').hasOwnProperty('extensions')) {
 var activeExtensionCount = 0;
 var extensionCount = this.model.get('php-extensions').extensions.length;
@@ -758,10 +758,10 @@ var currentExtensionTextStatus = "<span class='extension_name'>" + currentExtens
 } else {
 var currentExtensionIconStatus = this.wizard_icons_notice_template();
 if (currentExtensionName == 'imap'){
-var currentExtensionTextStatus = "<span class='extension_name'> PHP " + currentExtensionName + " extension </span><p>برای حل این مشکل، می‌توانید از طریق لینک وبلاگ زیر اقدام کنید:<a href='https://www.php.net/manual/en/imap.setup.php' target='_blank'>نحوه رفع مشکل افزونه imap در PHP</a></p>";
+var currentExtensionTextStatus = "<span class='extension_name'> PHP " + currentExtensionName + " پسوند </span><p>برای حل این مشکل، می‌توانید از طریق لینک وبلاگ زیر اقدام کنید:<a href='https://www.php.net/manual/en/imap.setup.php' target='_blank'>نحوه رفع مشکل افزونه imap در PHP</a></p>";
 }
 else if(currentExtensionName == 'mailparse'){
-var currentExtensionTextStatus = "<span class='extension_name'> PHP " + currentExtensionName + " extension </span><p>برای حل این مشکل، می‌توانید از طریق لینک وبلاگ زیر اقدام کنید:<a href='https://www.php.net/manual/en/book.mailparse.php' target='_blank'>نحوه رفع مشکل افزونه mailparse در PHP</a></p>";
+var currentExtensionTextStatus = "<span class='extension_name'> PHP " + currentExtensionName + " پسوند </span><p>برای حل این مشکل، می‌توانید از طریق لینک وبلاگ زیر اقدام کنید:<a href='https://www.php.net/manual/en/book.mailparse.php' target='_blank'>نحوه رفع مشکل افزونه mailparse در PHP</a></p>";
 }
 else{
 var currentExtensionTextStatus = "<span class='extension_name'>" + currentExtensionName + "افزونه در حال حاضر غیرفعال است</span>";
@@ -791,7 +791,7 @@ this.reference_nodes.execution.html(this.wizard_system_requirements_php_exe_temp
 this.reference_nodes.execution.find('.PHPExeTime-toggle-details').hide();
 if (false == this.model.get('fetch')) {
 this.reference_nodes.execution.find('.wizard-svg-icon-execution-criteria-checklist').html(this.wizard_icons_loader_template());
-this.reference_nodes.execution.find('label').html('Checking maximum execution time');
+this.reference_nodes.execution.find('label').html('بررسی حداکثر زمان اجرا');
 } else {
 if (true === this.model.get('php-maximum-execution').status) {
 this.reference_nodes.execution.find('.wizard-svg-icon-execution-criteria-checklist').html(this.wizard_icons_success_template());
@@ -812,7 +812,7 @@ this.reference_nodes.permission.html(this.wizard_system_requirements_php_env_tem
 this.reference_nodes.permission.find('.PHPPermissionEnvfile-toggle-details').hide();
 if (false == this.model.get('fetch')) {
 this.reference_nodes.permission.find('.wizard-svg-icon-permissionEnvfile-criteria-checklist').html(this.wizard_icons_loader_template());
-this.reference_nodes.permission.find('label').html('Checking currently enabled .env file');
+this.reference_nodes.permission.find('label').html('بررسی فایل .env که در حال حاضر فعال است');
 } else {
 if (true === this.model.get('php-envFile-permission').status) {
 this.reference_nodes.permission.find('.wizard-svg-icon-permissionEnvfile-criteria-checklist').html(this.wizard_icons_success_template());
@@ -833,7 +833,7 @@ this.reference_nodes.Configfiles.html(this.wizard_system_requirements_php_config
 this.reference_nodes.Configfiles.find('.PHPPermissionConfigfiles-error-message').hide();
 if (false == this.model.get('fetch')) {
 this.reference_nodes.Configfiles.find('.wizard-svg-icon-permissionConfigfiles-criteria-checklist').html(this.wizard_icons_loader_template());
-this.reference_nodes.Configfiles.find('label').html('Checking currently enabled Config-files');
+this.reference_nodes.Configfiles.find('label').html('بررسی فایل‌های پیکربندی فعال فعلی');
 } else if (this.model.get('php-configFiles-permission').hasOwnProperty('configfiles')) {
 var activeconfigfileCount = 0;
 var configfileCount = this.model.get('php-configFiles-permission').configfiles.length;
